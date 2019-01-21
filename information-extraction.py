@@ -40,4 +40,6 @@ if __name__ == '__main__':
     emails = extract_email_addresses(string)
     names = extract_names(string)
 
+print(numbers)
+print(emails)
 print(names)
