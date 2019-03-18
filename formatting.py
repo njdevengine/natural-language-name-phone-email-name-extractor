@@ -11,6 +11,9 @@ for i in range(0,length):
 df['Email 1'] = df['Email 1'].str.lower()
 df['Email 2'] = df['Email 2'].str.lower()
 
+#filter spaces and special characters cast to lower for proper names
+df['filter'] = df['Full Name'].str.lower().astype(str).map(lambda x: re.sub(r'\W+', '', x))
+
 length = len(emails)
 for i in range(0,length):
     emails[i] = emails[i].lower()
