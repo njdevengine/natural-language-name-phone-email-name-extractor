@@ -41,6 +41,7 @@ email_data = {}
 name_data = {}
 
 #for files whose names are formatted like C:\\my_files\name_100.txt
+#makes a dictionary entry for every file ie. "name":[email1@gmail.com...]
 
 for filename in glob.glob('my_files/*.txt'):
     with open(filename, 'r', encoding="utf-8") as myfile:
